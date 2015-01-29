@@ -4,11 +4,11 @@ window.Profile = {
     // Views: {},
     // Routers: {},
     init: function () {
-    	var dataset = [ { "r": 10, "stroke": "", "fill": "rgb(0, 133, 88)", "text": "" },
-    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "asdf" },
-    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "asdf" },
-    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "asdf" },
-    									{ "r": 10, "stroke": "", "fill": "rgb(0, 133, 88)", "text": "" }];
+    	var circle_end = [ { "r": 10, "stroke": "", "pos": 1, "fill": "rgb(0, 133, 88)", "text": "", "href": "" },
+    										 { "r": 10, "stroke": "", "pos": -1, "fill": "rgb(0, 133, 88)", "text": "", "href": "" }];
+    	var dataset = [ { "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "Baconbnb", "href": "" },
+    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "Medigo", "href": "" },
+    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "NoiseAlert", "href": "http://bit.do/noise-alert" }];
 			// var h = 200;
 			// var w = 1000;
 			var barPadding = 1;
@@ -53,35 +53,85 @@ window.Profile = {
 												 .attr('stroke', 'rgb(0, 133, 88)')
 												 .attr('stroke-width', 11)
 												 .attr('fill', 'none');
-
-
-			svg.selectAll('circle')
+			svg.selectAll('circle.end')
+				 .data(circle_end)
+				 .enter()
+				 .append('circle')
+				 .attr('class', 'end')
+				 .attr('cx', function(d, i) {
+				 		return i * w + padding * d.pos;
+				 })
+				 .attr('cy', h / 2)
+				 .attr('stroke', "")
+				 .attr('r', 10)
+				 .attr('fill', 'rgb(0, 133, 88)');
+			svg.selectAll('circle.points')
 		   	 .data(dataset)
 		 		 .enter()
 		  	 .append('circle')
+		  	 .attr('class', 'points')
 				 .attr('cx', function(d, i) {
-				 		return i * (w / dataset.length) + padding;
+				 		return (i + 0.5) * (w / dataset.length) + padding;
 				 })
 				 .attr('cy', h / 2)
 				 .attr('r', function(d) { return d.r; })
 				 .attr('stroke', function(d) { return d.stroke; })
 				 .attr('fill', function(d) { return d.fill; });
+			// svg.select('circle').append('a').attr('href', 'google.com').html('newpage').attr('x', 10).attr('y', 60);
+				 // .data(dataset)
+				 // .enter()
+				 // .append('a')
+				 // .attr('href:xlink', function(d) { return d.text; })
+				 // .attr('x', function(d, i) {
+				 // 		return i * (w / dataset.length) + padding;
+				 // })
+				 // .attr('y', h / 2 - padding);
+			// svg.selectAll('a')
+			// 	 .data(dataset)
+			// 	 .enter()
+			//    .append('a')
+			//    .attr('xlink:href', 'google.com')
+			//    .val('s')
+			//    .attr('x', 60)
+			//    .attr('y', 21);
+			// svg.select('text')
+			//    .data(dataset)
+			// 	 .enter()
+			//    .append('text')
+			//    .attr('x', 60)
+			//    .attr('y', 21);
+			// svg.selectAll('a')
+			// 	 .data(dataset)
+			// 	 .enter()
+			// 	 .append('a')
+			// 	 .html(function(d) { return d.text; })
+			// 	 .attr('x', function(d, i) {
+			// 	 		return i * (w / dataset.length) + padding;
+			// 	 })
+			// 	 .attr('y', h / 2 - padding);
+			// svg.selectAll('text')
+			// 	 .data(dataset)
+			// 	 .enter()
+			// 	 .append('text')
+			// 	 // .text(function(d) { return d.text; })
+			// 	 .html(function(d) { return '<a href="www.google.com" target="_blank">' + d.text + '</a>'; })
+			// 	 .attr('x', function(d, i) {
+			// 	 		return i * (w / dataset.length) + padding;
+			// 	 })
+			// 	 .attr('y', h / 2 - padding)
+			// 	 .attr('font-family', 'sans-serif')
+			// 	 .attr('font-size', '15px')
+			// 	 .attr('fill', 'black')
+			// 	 .attr('text-anchor')
 
-			svg.selectAll('text')
-				 .data(dataset)
-				 .enter()
-				 .append('text')
-				 .text(function(d) { return d.text; })
-				 .attr('x', function(d, i) {
-				 		return i * (w / dataset.length) + padding;
-				 })
-				 .attr('y', h / 2 - padding)
-				 .attr('font-family', 'sans-serif')
-				 .attr('font-size', '12px')
-				 .attr('fill', 'black')
-				 .attr('text-anchor')
 
 
+		// <a xlink:href="https://developer.mozilla.org/en-US/docs/SVG"
+  //    target="_blank">
+  //   <rect height="30" width="120" y="0" x="0" rx="15"/>
+  //   <text fill="white" text-anchor="middle" 
+  //         y="21" x="60">SVG on MDN</text>
+  // </a>
 				 // var text = svg.selectAll('text')
           //               .data(dataset)
           //               .enter()
