@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="css/icons.css">
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="d3/d3.v3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<link rel="icon" type="image/png" href="css/images/pic.jpg">
 </head>
 
@@ -20,25 +23,23 @@
 		</nav>
 		<!-- maybe svg this? --> 
 		<img id="header__avatar" src="css/images/pic.jpg">
-		<!-- <h1>
-			<span class="normal">A</span><span class="normal">L</span><span class="normal">.</span><span class="normal">T</span><span class="normal" style="font-size: 30px;">&copy;</span>
-		</h1> -->
-		<h2>I'm <span>ALBERT TSENG</span>, Software Developer <br>and entrepeneur with a passion in front-end work.</h2>
+		<h2>I'm <span>ALBERT TSENG</span>, Software Developer <br>and entrepeneur with a passion for front-end work.</h2>
 	</div>
 	<div class="container">
 	<main>
-		<h1>
+		<div id="visualizer"></div>
+		<h1 id="profile">
 			<svg width="100" height="20">
 			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> Profile <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
 		</h1>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus ipsum, aliquam non vulputate in, fringilla at nunc. Pellentesque vitae aliquet augue, in imperdiet ipsum. Suspendisse eget porttitor dui. Fusce eros erat, accumsan eget porttitor eget, suscipit id elit. Nullam vestibulum finibus tempus. Nulla ante leo, maximus eget cursus at, rutrum aliquam libero. Curabitur in ipsum ullamcorper, aliquam neque scelerisque, blandit mi. Praesent sed neque sit amet est luctus vestibulum at in enim. Sed libero massa, sodales a convallis non, congue at lacus. Sed sodales nibh id blandit gravida. Integer tincidunt ultrices arcu, non accumsan neque luctus non. Nulla vehicula sapien ac est ornare, semper fringilla neque consequat. Integer vulputate facilisis congue. Pellentesque et lacus neque. Vivamus ac dictum tortor. Quisque tempor pretium erat, ac tempor odio elementum sit amet.
 		</p>
-		<h1>
+		<h1 id="projects">
 			<svg width="100" height="20">
 			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> <a name="projects">Projects</a> <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
 		</h1>
-		<ul style="list-style:none;margin:0;">
+		<!-- <ul style="list-style:none;margin:0;">
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
@@ -51,8 +52,8 @@
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
 			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-		</ul>
-		<svg width="800" height="40">
+		</ul> -->
+		<!-- <svg width="800" height="40">
 			<circle cx="10" cy="20" r="10" fill="rgb(0, 133, 88)"/>
 			<circle cx="790" cy="20" r="10" fill="rgb(0, 133, 88)"/>
 			<line x1="10" y1="20" x2="790" y2="20" style="stroke: rgb(0, 133, 88);stroke-width:11" />
@@ -62,8 +63,8 @@
 			<circle cx="500" cy="20" r="8" stroke="rgb(61, 57, 56)" stroke-width="2" fill="rgb(255, 
 			255, 255)"/>
 			<circle cx="500" cy="20" r="4" stroke="rgb(61, 57, 56)" fill="rgb(61, 57, 56)"/>
-		</svg>
-		<h1>
+		</svg> -->
+		<h1 id="people">
 			<svg width="100" height="20">
 			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> People <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
 		</h1>
@@ -83,6 +84,7 @@
 	</div>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/pagetransitions.js"></script> -->
+	<script src="scripts/main.js"></script>
 </body>
 <footer>
 	Copyright &copy; 2014 SomeNonExistentCompany. All rights reserved.
