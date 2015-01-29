@@ -6,9 +6,9 @@ window.Profile = {
     init: function () {
     	var circle_end = [ { "r": 10, "stroke": "", "pos": 1, "fill": "rgb(0, 133, 88)", "text": "", "href": "" },
     										 { "r": 10, "stroke": "", "pos": -1, "fill": "rgb(0, 133, 88)", "text": "", "href": "" }];
-    	var dataset = [ { "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "Baconbnb", "href": "" },
-    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "Medigo", "href": "" },
-    									{ "r": 6, "stroke": "gray", "fill": "rgb(255, 255, 255)", "text": "NoiseAlert", "href": "http://bit.do/noise-alert" }];
+    	var dataset = [ { "r": 7, "stroke": "rgb(0, 133, 88)", "strokewidth": 2.5, "fill": "rgb(255, 255, 255)", "text": "Baconbnb", "href": "http://baconbnb.herokuapp.com" },
+    									{ "r": 7, "stroke": "rgb(0, 133, 88)", "strokewidth": 2.5,"fill": "rgb(255, 255, 255)", "text": "Medigo", "href": "#" },
+    									{ "r": 7, "stroke": "rgb(0, 133, 88)", "strokewidth": 2.5,"fill": "rgb(255, 255, 255)", "text": "NoiseAlert", "href": "http://bit.do/noise-alert" }];
 			// var h = 200;
 			// var w = 1000;
 			var barPadding = 1;
@@ -71,10 +71,11 @@ window.Profile = {
 				 .data(dataset)
 				 .enter()
 				 .append('a')
-				 .attr('xlink:href', "google.com")
+				 .attr('xlink:href', function(d) { return d.href; })
+				 .attr('target', '_blank');
 
   		links.append('text')
-				 .text('GOOGLE')
+				 .text(function(d) { return d.text; })
 				 .attr('x', function(d, i) {
 				 		return (i + 0.5) * (w / dataset.length)
 				 })
@@ -87,6 +88,7 @@ window.Profile = {
 					 .attr('cy', h / 2)
 					 .attr('r', function(d) { return d.r; })
 					 .attr('stroke', function(d) { return d.stroke; })
+					 .attr('stroke-width', function(d) { return d.strokewidth; })
 					 .attr('fill', function(d) { return d.fill; });
 			
     }
