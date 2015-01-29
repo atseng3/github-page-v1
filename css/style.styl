@@ -1,0 +1,356 @@
+*
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
+	// font-family: 'Indie Flower', cursive;
+html.currentPage
+	animation moveToLeft .5s ease-in-out both
+	// animation-fill-mode both
+
+
+html.previousPage
+	animation scaleDown 0.7s;
+	animation-fill-mode both
+
+body
+	font-family: 'Indie Flower', cursive
+	width 100%
+	margin auto
+	text-align center
+
+.header
+	padding 10px 10px 20px
+	margin 0
+	background url('images/congruent_outline.png') center
+	.header__logo
+		font-weight normal
+		font-size 2em
+		color hsla(0, 0%, 100%, 1.0000)
+		width 100px
+		float left
+	// .header__profile
+	// 	background: url("images/pic.jpg") no-repeat;
+	// 	width: 100px;
+	// 	height: 100px;
+	// 	border-radius: 50%;
+	// 	background-size: contain;
+	
+	nav
+		width 372px
+		height 60px
+		margin 0px auto
+		border-bottom 1px solid white
+		margin-bottom 2%
+		animation shiftDown 1s
+		animation-delay 0.5s
+		animation-fill-mode both
+	
+	nav a
+		width 74px
+		height 41px
+		text-decoration none
+		font-size 1.3em
+		color hsla(0, 0%, 100%, 1.0000)
+		padding 8px 25px
+		display inline-block
+		transition font-size 0.3s ease,
+				   border-bottom 0.2s ease-in
+	
+	nav a:hover, nav a.active
+		font-size 1.75em
+		border-bottom 3px solid white
+
+	#header__avatar 
+		width 148px
+		height 161px
+		border-radius 50%
+		border 4px solid hsla(0, 0%, 100%, 1.0000)
+		animation bounceIn 1s
+		animation-fill-mode both
+
+	.header__logo
+		// margin 0
+		// font-weight normal
+		// font-size 10em
+		// color hsla(0, 0%, 100%, 1.0000)
+		
+		// span
+		// 	display inline-block
+		// 	animation bounceIn 1s
+		// 	animation-fill-mode both
+			// animation-fill-mode both
+			
+		// not working yet
+		// span.abnormal
+		// 	animation bounceInDown 2s
+			// animation-fill-mode both
+		// animation delay not working
+		// span:nth-child(1)
+			// animation-delay 0.25s
+		span:nth-child(2)
+			animation-delay 0.5s
+		span:nth-child(3)
+			// animation bounceInDown 0.75s
+			animation-delay 0.75s
+		span:nth-child(4)
+			animation-delay 1s
+		span:nth-child(5)
+			animation-delay 1.25s
+		
+		// temp
+		span.something2
+			animation scaleDown 0.5s;
+			animation-fill-mode both
+		    // animation-fill-mode both
+	h2
+		font-family 'Ubuntu', sans-serif
+		font-weight 400
+		color hsla(0, 0%, 100%, 1.0000)
+		span
+			// font-family 'Indie Flower', cursive
+			font-weight 500
+@keyframes shiftDown
+	from {
+		opacity 0.5
+		transform translateY(-120%)
+	}
+	to {
+		opacity 1
+		transform none
+	}
+@keyframes moveToLeft
+	from {
+		transform translateX(100%)
+	}
+	to { 
+		transform none
+	}
+		    
+@keyframes scaleDown
+	to {
+		opacity 0
+		transform scale(0.8)
+	}
+
+@keyframes bounceIn
+	0%, 20%, 40%, 60%, 80%, 100%
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	0%
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	20%
+		transform: scale3d(1.1, 1.1, 1.1);
+	40%
+		transform: scale3d(.9, .9, .9);
+	60%
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	80%
+		transform: scale3d(.97, .97, .97);
+	100%
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+@keyframes bounceInDown
+	0%, 60%, 75%, 90%, 100%
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	0%
+		opacity 0
+		transform translate3d(0, -3000px, 0)
+	60%
+		opacity 1
+		transform translate3d(0, 25px, 0)
+	75%
+		transform translate3d(0, -10px, 0)
+	90%
+		transform translate3d(0, 5px, 0)
+	100%
+		transform none
+
+.container
+	width 1024px	
+	margin 0 auto
+	main
+		form 
+			p
+				// margin auto
+				padding 0
+
+			label
+				cursor pointer
+			
+			// textarea
+			// 	height initial
+
+			input, textarea
+				margin auto
+				height 20px
+				width 300px
+				display block
+
+			button
+				margin 10px 0
+				padding 5px
+				width 148px
+		
+
+p
+	font-family Megrim
+	line-height 1.6
+	// text-align justify
+	padding 10px
+
+.bottom-blur
+	background white
+	
+	
+footer
+	color hsla(0, 0%, 100%, 1.0000)
+	// color #f3f0ea
+	margin-top 10px
+	padding 10px
+	background hsla(0, 0.0000%, 20.3922%, 1.0000)
+	// background #453e44
+	text-align center
+	
+// #hello
+// 	transform rotate(5deg)	
+
+$icon
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Enable Ligatures ================ */
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+.whatever
+	text-align left
+	&:before
+		@extends $icon
+		content: "\e608"
+	font-size 30px
+
+.social-media__block
+	@extends $icon
+	margin 0 10px
+	display inline-block
+	cursor pointer
+	position relative
+	overflow: hidden
+	font-size 50px
+	color #343434
+	// flipping the logos
+	// &:hover
+	// 	animation flip 1s ease-out
+	// color #453e44
+	transition all 0.2s linear
+		
+.social-media__facebook
+	&:hover
+		color #3B5998
+		// box-shadow: 2px 2px 2px 1px #CCC;
+		transform rotate(-10deg)
+		// transform rotateX(30deg)
+
+.social-media__github
+	&:hover
+		color teal
+		transform rotate(-10deg)
+
+.social-media__linkedin
+	&:hover
+		color #4875B4
+		transform rotate(-10deg)
+
+// slide boba before down on hover effect
+.something
+	@extends $icon
+	position relative
+	overflow: hidden
+	font-size 50px
+	&:before
+		@extends $icon
+		content "\e604"
+		position absolute
+		color pink
+		// background black
+		opacity 0
+	&:hover:before
+		animation slideDown 0.5s
+		animation-fill-mode both
+
+
+@keyframes flip
+	to {
+		transform rotateY(180deg)
+	}
+
+@keyframes slideUp
+	0%
+		opacity 0
+		transform translateY(100%)
+		transform-origin 50% 50%
+	100%
+		opacity 1
+		transform-origin 50% 50%
+		transform translateY(none)
+		
+// .whatever-2
+// 	position relative
+// 	&:before
+// 		@extends $icon
+// 		content "\e601"
+// 		position absolute
+// 		top -50px
+		
+		
+// .icon-boba:before
+// 	@extends $icon
+// 	content "\e601"
+// 	position absolute
+// 	top 50px
+	
+/* ====== media ====== */
+.media 
+	margin:10px
+.media, .bd 
+	overflow hidden
+	_overflow visible
+	zoom 1
+.media .img
+	float left
+	margin-right 10px
+.media .img img
+	display block
+	height 40px
+	width 40px
+.media .imgExt
+	float right
+	margin-left 10px
+// .boba
+// 	@extends $icon
+// 	content "\e601"
+// 	// &:before
+// 	// 	@extend $icon
+// 	// 	content	"\e601"
+// 	// 	position absolute
+// 	// 	top 50px
+// 	// 	left 50px
+// 	font-size 50px
+
+
+// available fonts
+// dribbble
+// 
