@@ -67,29 +67,31 @@ window.Profile = {
 				 .attr('r', 10)
 				 .attr('fill', 'rgb(0, 133, 88)');
 			// add projects
-			var links = svg.selectAll('a')
-				 .data(dataset)
-				 .enter()
-				 .append('a')
-				 .attr('xlink:href', function(d) { return d.href; })
-				 .attr('target', '_blank');
+			// var links = svg.selectAll('a')
+			// 	 .data(dataset)
+			// 	 .enter()
+			// 	 .append('a')
+			// 	 .attr('xlink:href', function(d) { return d.href; })
+			// 	 .attr('target', '_blank');
+			// 	 // .attr("transform", "rotate(-10deg)");
 
-  		links.append('text')
-				 .text(function(d) { return d.text; })
-				 .attr('x', function(d, i) {
-				 		return (i + 0.5) * (w / dataset.length)
-				 })
-				 .attr('y', h / 2 - padding);
+  	// 	links.append('text')
+			// 	 .text(function(d) { return d.text; })
+			// 	 .attr('x', function(d, i) {
+			// 	 		return (i + 0.5) * (w / dataset.length)
+			// 	 })
+			// 	 .attr('y', h / 2 - padding);
+				
 			
-			links.append('circle')
-					 .attr('cx', function(d, i) {
-				 			return (i + 0.5) * (w / dataset.length)
-					 })
-					 .attr('cy', h / 2)
-					 .attr('r', function(d) { return d.r; })
-					 .attr('stroke', function(d) { return d.stroke; })
-					 .attr('stroke-width', function(d) { return d.strokewidth; })
-					 .attr('fill', function(d) { return d.fill; });
+			// links.append('circle')
+			// 		 .attr('cx', function(d, i) {
+			// 	 			return (i + 0.5) * (w / dataset.length)
+			// 		 })
+			// 		 .attr('cy', h / 2)
+			// 		 .attr('r', function(d) { return d.r; })
+			// 		 .attr('stroke', function(d) { return d.stroke; })
+			// 		 .attr('stroke-width', function(d) { return d.strokewidth; })
+			// 		 .attr('fill', function(d) { return d.fill; });
 			
     }
 };
