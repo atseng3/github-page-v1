@@ -10,13 +10,15 @@ window.Profile = {
 
     handleClick: function(event) {
     	event.preventDefault();
-    	$('#projects').addClass('slideLeft');
-  		$('#desc').addClass('fadeOut');
-    	// var $currentTarget = $(event.currentTarget);
-    	// if($currentTarget.hasClass('projects')) {
-    		// $('#projects').addClass('slideLeft');
-    		// $('#desc').addClass('fadeOut');
-    	// }
+    	var $projects = $('#projects');
+    	var $desc = $('#desc');
+    	if($projects.hasClass('slideLeft')) {
+    		$projects.removeClass('slideLeft');
+    		$projects.addClass('slideRightOut');
+    	} else {
+				$('#projects').addClass('slideLeft');
+	  		$('#desc').addClass('fadeOut');
+    	}
     }
 };
 

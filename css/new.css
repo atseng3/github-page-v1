@@ -192,21 +192,45 @@ nav .contact:hover:before {
   content: "\e608";
   color: #fff;
   font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
 }
 #projects .projects-container .tile:before {
   content: "\e606";
   color: #fff;
   font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
 }
 #projects .projects-container .subscription:before {
   content: "\e600";
   color: #fff;
   font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
 }
 #projects .projects-container .baconbnb:before {
   content: "\e602";
   color: #fff;
   font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
 }
 #projects .projects-container .projects-container__items:hover:before {
   color: #c84e4b;
