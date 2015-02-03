@@ -15,9 +15,13 @@ window.Profile = {
     	if($projects.hasClass('slideLeft')) {
     		$projects.removeClass('slideLeft');
     		$projects.addClass('slideRightOut');
+    		$desc.removeClass('fadeOut');
+    		$desc.addClass('fadeIn');
     	} else {
-				$('#projects').addClass('slideLeft');
-	  		$('#desc').addClass('fadeOut');
+    		$projects.removeClass('slideRightOut');
+				$projects.addClass('slideLeft');
+				$desc.removeClass('fadeIn');
+	  		$desc.addClass('fadeOut');
     	}
     }
 };

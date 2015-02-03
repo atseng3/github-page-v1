@@ -166,52 +166,31 @@ nav
 			vertical-align top
 			text-align center
 			position relative
+			transition all 0.2s ease
+		.projects-container__items:before
+			@extends $icon
+			color #FFF
+			font-size 100px
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			margin 50px
+			transition all 0.2s ease
 		.mic:before
-			@extends $icon
 			content "\e608"
-			color #FFF
-			font-size 100px
-			position absolute
-			top 0
-			left 0
-			right 0
-			bottom 0
-			margin 50px
 		.tile:before
-			@extends $icon
 			content "\e606"
-			color #FFF
-			font-size 100px
-			position absolute
-			top 0
-			left 0
-			right 0
-			bottom 0
-			margin 50px
 		.subscription:before
-			@extends $icon
 			content "\e600"
-			color #FFF
-			font-size 100px
-			position absolute
-			top 0
-			left 0
-			right 0
-			bottom 0
-			margin 50px
 		.baconbnb:before
-			@extends $icon
 			content "\e602"
-			color #FFF
-			font-size 100px
-			position absolute
-			top 0
-			left 0
-			right 0
-			bottom 0
-			margin 50px
 		.projects-container__items:hover:before
-			color rgba(200,78,75, 1)
+			color #F2CC7F
+		.projects-container__items:hover
+			color #F2CC7F
+			border 1px solid #F2CC7F
 		.projects-container__item-name
 			position absolute
 			bottom 0
@@ -222,11 +201,18 @@ nav
 		// transition all 0.2s ease
 			
 .slideLeft
-	animation slideLeft 0.5s
+	animation slideLeft 0.75s
 	animation-fill-mode both
 .fadeOut
 	animation fadeOut 0.2s
 	animation-delay 0.2s
+	animation-fill-mode both
+.fadeIn
+	animation fadeIn 0.2s
+	animation-delay 0.2s
+	animation-fill-mode both
+.slideRightOut
+	animation slideRightOut 0.75s
 	animation-fill-mode both
 
 /* ==========================================================================
@@ -320,4 +306,18 @@ nav
 	}
 	to {
 		opacity 0
+	}
+@keyframes slideRightOut
+	0% {
+		transform none
+	}
+	100% {
+		transform translateX(200%)
+	}
+@keyframes fadeIn
+	from {
+		opacity 0
+	}
+	to {
+		opacity 1
 	}

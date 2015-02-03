@@ -1,10 +1,7 @@
 nav .logo:before,
 nav .projects:before,
 nav .contact:before,
-#projects .projects-container .mic:before,
-#projects .projects-container .tile:before,
-#projects .projects-container .subscription:before,
-#projects .projects-container .baconbnb:before {
+#projects .projects-container .projects-container__items:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -187,53 +184,39 @@ nav .contact:hover:before {
   vertical-align: top;
   text-align: center;
   position: relative;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+#projects .projects-container .projects-container__items:before {
+  color: #fff;
+  font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 #projects .projects-container .mic:before {
   content: "\e608";
-  color: #fff;
-  font-size: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 50px;
 }
 #projects .projects-container .tile:before {
   content: "\e606";
-  color: #fff;
-  font-size: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 50px;
 }
 #projects .projects-container .subscription:before {
   content: "\e600";
-  color: #fff;
-  font-size: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 50px;
 }
 #projects .projects-container .baconbnb:before {
   content: "\e602";
-  color: #fff;
-  font-size: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 50px;
 }
 #projects .projects-container .projects-container__items:hover:before {
-  color: #c84e4b;
+  color: #f2cc7f;
+}
+#projects .projects-container .projects-container__items:hover {
+  color: #f2cc7f;
+  border: 1px solid #f2cc7f;
 }
 #projects .projects-container .projects-container__item-name {
   position: absolute;
@@ -243,8 +226,8 @@ nav .contact:hover:before {
   margin-bottom: 15px;
 }
 .slideLeft {
-  -webkit-animation: slideLeft 0.5s;
-          animation: slideLeft 0.5s;
+  -webkit-animation: slideLeft 0.75s;
+          animation: slideLeft 0.75s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -253,6 +236,20 @@ nav .contact:hover:before {
           animation: fadeOut 0.2s;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.fadeIn {
+  -webkit-animation: fadeIn 0.2s;
+          animation: fadeIn 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.slideRightOut {
+  -webkit-animation: slideRightOut 0.75s;
+          animation: slideRightOut 0.75s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -395,5 +392,41 @@ nav .contact:hover:before {
   }
   to {
     opacity: 0;
+  }
+}
+@-webkit-keyframes slideRightOut {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+@keyframes slideRightOut {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
