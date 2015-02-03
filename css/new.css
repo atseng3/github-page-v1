@@ -41,14 +41,16 @@ p {
       -ms-transform: translateX(-200%);
           transform: translateX(-200%);
   -webkit-animation: slideLeft 1.5s;
-  -webkit-animation-delay: 1.5s;
-  -webkit-animation: slideLeft 1.5s;
           animation: slideLeft 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 p span {
   color: #c84e4b;
   font-weight: 700;
+  text-shadow: 1px 1px 1px #000;
 }
 #background {
   background: url("images/pic_gradient.jpg") no-repeat;
@@ -71,7 +73,7 @@ nav {
   left: 0;
   text-align: center;
   -webkit-animation: slideLeft 1.5s;
-  animation: slideLeft 1.5s;
+          animation: slideLeft 1.5s;
 }
 nav .nav-brand {
   height: 80px;
@@ -111,26 +113,31 @@ nav .nav-list__items {
   padding: 10px 0px;
   position: relative;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+nav .nav-list__items:hover {
+  color: #c84e4b;
 }
 nav .projects:before {
   content: "\e607";
   color: #fff;
   font-size: 40px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+nav .projects:hover:before {
+  color: #c84e4b;
 }
 nav .contact:before {
   content: "\e60a";
   color: #fff;
   font-size: 40px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
-@-webkit-keyframes slideLeft {
-  0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-  }
+nav .contact:hover:before {
+  color: #c84e4b;
 }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -147,7 +154,7 @@ nav .contact:before {
     width: 100%;
     height: 50px;
     -webkit-animation: slideDown 1.5s;
-    animation: slideDown 1.5s;
+            animation: slideDown 1.5s;
   }
   nav .nav-brand {
     height: 80px;
@@ -181,16 +188,6 @@ nav .contact:before {
   }
 }
 /* Smartphones (landscape) ----------- */
-@-webkit-keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
 @-webkit-keyframes slideLeft {
   0% {
     -webkit-transform: translateX(-200%);
