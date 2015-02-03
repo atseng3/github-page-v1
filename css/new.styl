@@ -32,16 +32,20 @@ p
 	margin-left 100px
 	font-weight 400
 	color rgba(0,0,0, 0.6)
-	// opacity 0.6
 	font-size 40px
 	line-height 55px
-	// top 20%
 	position absolute
 	top 45%
+	transform translateX(-120%)
+	-webkit-animation slideLeft 1.5s
+	-webkit-animation-delay 1.5s
+	-moz-animation slideLeft 1.5s
+	-o-animation slideLeft 1.5s
+	animation slideLeft 1.5s
+	-webkit-animation-fill-mode both
 	span
-		// display inline-block
 		color	rgba(200,78,75, 1)
-		// opacity 1
+		font-weight 700
 #background
 	background: url('images/pic_gradient.jpg') no-repeat
 	background-position right 25%
@@ -62,7 +66,12 @@ nav
 	top 0
 	left 0
 	text-align center
-	.nav-items
+	-webkit-animation slideLeft 1.5s
+	-moz-animation slideLeft 1.5s
+	-o-animation slideLeft 1.5s
+	animation slideLeft 1.5s
+	
+	.nav-brand
 		height 80px
 		color #FFF
 		font-size 20px
@@ -84,6 +93,19 @@ nav
 		height 42px
 		color #FFF
 		font-size 40px
+	.nav-list
+		height 90%
+		margin-top 50px
+	.nav-list__items
+		display block
+		text-decoration none
+		height 80px
+		color #FFF
+		font-size 20px
+		line-height	25px
+		padding 10px 0px
+		position relative
+		cursor pointer
 	.projects:before
 		@extends $icon
 		content "\e607"
@@ -94,10 +116,34 @@ nav
 		content "\e60a"
 		color #FFF
 		font-size 40px
-		
-
-
-
+@-webkit-keyframes slideLeft
+	0% {
+		transform translateX(-120%)
+	}
+	100% {
+		transform none
+	}
+@-moz-keyframes slideLeft
+	0% {
+		transform translateX(-120%)
+	}
+	100% {
+		transform none
+	}
+@-o-keyframes slideLeft
+	0% {
+		transform translateX(-120%)
+	}
+	100% {
+		transform none
+	}
+@keyframes slideLeft
+	0% {
+		transform translateX(-120%)
+	}
+	100% {
+		transform none
+	}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.

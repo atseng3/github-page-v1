@@ -38,9 +38,17 @@ p {
   line-height: 55px;
   position: absolute;
   top: 45%;
+  transform: translateX(-120%);
+  -webkit-animation: slideLeft 1.5s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation: slideLeft 1.5s;
+  -o-animation: slideLeft 1.5s;
+  animation: slideLeft 1.5s;
+  -webkit-animation-fill-mode: both;
 }
 p span {
   color: #c84e4b;
+  font-weight: 700;
 }
 #background {
   background: url("images/pic_gradient.jpg") no-repeat;
@@ -62,8 +70,12 @@ nav {
   top: 0;
   left: 0;
   text-align: center;
+  -webkit-animation: slideLeft 1.5s;
+  -moz-animation: slideLeft 1.5s;
+  -o-animation: slideLeft 1.5s;
+  animation: slideLeft 1.5s;
 }
-nav .nav-items {
+nav .nav-brand {
   height: 80px;
   color: #fff;
   font-size: 20px;
@@ -87,6 +99,21 @@ nav .logo:before {
   color: #fff;
   font-size: 40px;
 }
+nav .nav-list {
+  height: 90%;
+  margin-top: 50px;
+}
+nav .nav-list__items {
+  display: block;
+  text-decoration: none;
+  height: 80px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 10px 0px;
+  position: relative;
+  cursor: pointer;
+}
 nav .projects:before {
   content: "\e607";
   color: #fff;
@@ -96,6 +123,30 @@ nav .contact:before {
   content: "\e60a";
   color: #fff;
   font-size: 40px;
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-moz-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
 }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -114,3 +165,83 @@ nav .contact:before {
   }
 }
 /* Smartphones (landscape) ----------- */
+@-moz-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-moz-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-moz-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: none;
+  }
+}
