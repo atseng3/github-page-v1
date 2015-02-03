@@ -1,6 +1,10 @@
 nav .logo:before,
 nav .projects:before,
-nav .contact:before {
+nav .contact:before,
+#projects .projects-container .mic:before,
+#projects .projects-container .tile:before,
+#projects .projects-container .subscription:before,
+#projects .projects-container .baconbnb:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -168,8 +172,11 @@ nav .contact:hover:before {
   vertical-align: center;
   line-height: 100px;
 }
+#projects .projects-container {
+  text-align: center;
+}
 #projects .projects-container .projects-container__items {
-  line-height: 400px;
+  cursor: pointer;
   margin: 20px;
   display: inline-block;
   width: 200px;
@@ -179,6 +186,37 @@ nav .contact:hover:before {
   border-radius: 10px;
   vertical-align: top;
   text-align: center;
+  position: relative;
+}
+#projects .projects-container .mic:before {
+  content: "\e608";
+  color: #fff;
+  font-size: 100px;
+}
+#projects .projects-container .tile:before {
+  content: "\e606";
+  color: #fff;
+  font-size: 100px;
+}
+#projects .projects-container .subscription:before {
+  content: "\e600";
+  color: #fff;
+  font-size: 100px;
+}
+#projects .projects-container .baconbnb:before {
+  content: "\e602";
+  color: #fff;
+  font-size: 100px;
+}
+#projects .projects-container .projects-container__items:hover:before {
+  color: #c84e4b;
+}
+#projects .projects-container .projects-container__item-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 15px;
 }
 .slideLeft {
   -webkit-animation: slideLeft 0.5s;
