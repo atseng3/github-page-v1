@@ -118,6 +118,9 @@ nav .nav-list__items {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
+nav .nav-list__items.selected {
+  color: #c84e4b;
+}
 nav .nav-list__items:hover {
   color: #c84e4b;
 }
@@ -127,6 +130,9 @@ nav .projects:before {
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
+}
+nav .projects:before.selected {
+  color: #c84e4b;
 }
 nav .projects:hover:before {
   color: #c84e4b;
@@ -143,29 +149,48 @@ nav .contact:hover:before {
 }
 #projects {
   height: 100%;
-  background: rgba(0,0,0,0.6);
-  width: 100%;
+  background: rgba(0,0,0,0.4);
   position: absolute;
+  left: 100px;
   right: 0;
   -webkit-transform: translateX(200%);
       -ms-transform: translateX(200%);
           transform: translateX(200%);
+  color: #fff;
 }
-#projects .project-items {
-  width: 100px;
+#projects .project-title {
+  text-transform: uppercase;
+  color: #c89f4b;
+  font-size: 30px;
   height: 100px;
+  text-align: center;
+  border-bottom: 1px solid #fff8eb;
+  vertical-align: center;
+  line-height: 100px;
+}
+#projects .projects-container .projects-container__items {
+  line-height: 400px;
+  margin: 20px;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  font-size: 25px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  vertical-align: top;
+  text-align: center;
 }
 .slideLeft {
-  -webkit-animation: slideLeft 1.5s;
-          animation: slideLeft 1.5s;
+  -webkit-animation: slideLeft 0.5s;
+          animation: slideLeft 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 .fadeOut {
-  -webkit-animation: fadeOut 1s;
-          animation: fadeOut 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: fadeOut 0.2s;
+          animation: fadeOut 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
