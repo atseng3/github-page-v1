@@ -1,102 +1,78 @@
 <!DOCTYPE html>
+<!--
+       .__ ___.                  __   
+_____  |  |\_ |__   ____________/  |_ 
+\__  \ |  | | __ \_/ __ \_  __ \   __\
+ / __ \|  |_| \_\ \  ___/|  | \/|  |  
+(____  /____/___  /\___  >__|   |__|  
+     \/         \/     \/            
+
+  Greetings!! Welcome to my site.
+  This site was designed and built by me (All Rights Reserved ;) )
+  Some tech used are:
+  	- Stylus
+  	- D3
+  	- Icomoon
+  	- And that's it! The simpler the better am I right?? :)
+	-->
 <html class="" lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Albert Tseng</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/new.css">
 	<link rel="stylesheet" href="css/icons.css">
-	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="d3/d3.v3.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
 
+	<!-- <link rel="icon" type="image/jpg" href="css/images/pic.jpg"> -->
+	<meta name="viewport" content="width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<!-- <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" /> -->
+	<!-- <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina-display.png" /> -->
+	<!-- <link rel="icon" type="image/png" href="apple-touch-icon.png"> -->
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body id="home">
-	<div class="header">
-		<div class="header__logo">
-			<span class="normal">A</span><span class="normal">L</span><span class="normal">.</span><span class="normal">T</span><span class="normal" style="font-size: 12px;">&copy;</span>
-		</div>
+<body>
+	<div id="background">
 		<nav>
-			<a href="#profile" class="active">Profile</a><a href="#projects">Projects</a><a href="new.html">People</a>
-		</nav>
-		<!-- maybe svg this? --> 
-		<img id="header__avatar" src="css/images/pic.jpg">
-		<h2>I'm <span>ALBERT TSENG</span>, Software Developer <br>and entrepeneur with a passion for front-end work.</h2>
-	</div>
-	<div class="container">
-	<main>
-		<div id="visualizer"></div>
-		<h1 id="profile">
-			<svg width="100" height="20">
-			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> Profile <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
-		</h1>
-		<p>
-			Hello! Welcome to my site! I started out in Taiwan and came to the US when I was 15. After completing highschool I went to University of Illinois to study Electrical and Computer Engineering. After college I did an electrical engineering job for a bit and took an interest in web development. After a lot of messing around I finally built my first web app: Baconbnb. It is a clone of the popular site Airbnb back in 2013. 
-
-			Currently I am a front end developer at Chegg Inc. and I love it! The front end is a lot of fun. I enjoy building amazing UIs and thinking about user engagement. Needless to say there is still a lot to learn and I keep myself busy by building apps with current technologies. 
-		</p>
-		<h1 id="projects">
-			<svg width="100" height="20">
-			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> <a name="projects">Projects</a> <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
-		</h1>
-		<!-- <ul style="list-style:none;margin:0;">
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-			<li style="transform:rotate(-30deg);display:inline-block;">Hello</li>
-		</ul> -->
-		<div id="projects-bar"></div>
-		<div id="projects-bar">
-			<div class="projects-bar__label">
-				<a href="http://baconbnb.herokuapp.com" target="_blank"><div class="circle"></div>Baconbnb</a>
-	 			<a href="#" target="_blank"><div class="circle"></div>Medigssso</a>
-	 			<a href="http://bit.do/noise-alert" target="_blank"><div class="circle"></div>NoiseAlert</a>
+			<div class="nav-brand logo">
+				
 			</div>
-			<svg width="800" height="40">
-				<circle cx="10" cy="20" r="10" fill="rgb(0, 133, 88)"/>
-				<circle cx="790" cy="20" r="10" fill="rgb(0, 133, 88)"/>
-				<line x1="10" y1="20" x2="790" y2="20" style="stroke: rgb(0, 133, 88);stroke-width:11" />
-	 			<!-- <circle cx="100" cy="20" r="6" stroke="gray" fill="rgb(255, 
-				255, 255)"/>
-				<circle cx="200" cy="20" r="6" stroke="gray" fill="rgb(255, 255, 255)"/>
-				<circle cx="500" cy="20" r="8" stroke="rgb(61, 57, 56)" stroke-width="2" fill="rgb(255, 
-				255, 255)"/>
-				<circle cx="500" cy="20" r="4" stroke="rgb(61, 57, 56)" fill="rgb(61, 57, 56)"/> -->
-			</svg>
- 		</div>
-		<h1 id="people">
-			<svg width="100" height="20">
-			<line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg> People <svg width="100" height="20"><line x1="0" y1="10" x2="100" y2="10" style="stroke:hsla(0, 0.0000%, 20.3922%, 1.0000);stroke-width:4" /></svg>
-		</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus ipsum, aliquam non vulputate in, fringilla at nunc. Pellentesque vitae aliquet augue, in imperdiet ipsum. 
-			Suspendisse eget porttitor dui. Fusce eros erat, accumsan eget porttitor eget, suscipit id elit. Nullam vestibulum finibus tempus. Nulla ante leo, maximus eget cursus at, rutrum aliquam libero. Curabitur in ipsum ullamcorper, aliquam neque scelerisque, blandit mi. Praesent sed neque sit amet est luctus vestibulum at in enim. Sed libero massa, sodales a convallis non, congue at lacus. Sed sodales nibh id blandit gravida. Integer tincidunt ultrices arcu, non accumsan neque luctus non. Nulla vehicula sapien ac est ornare, semper fringilla neque consequat. Integer vulputate facilisis congue. Pellentesque et lacus neque. Vivamus ac dictum tortor. Quisque tempor pretium erat, ac tempor odio elementum sit amet.
-		</p>
-	</main>
-	</div>
+			<div class="nav-list">
+				<a class="nav-list__items projects">
+					Projects
+				</a>
+				<a href="mailto:atseng3@gmail.com" class="nav-list__items contact">
+					Contact
+				</a>	
+			</div>
+		</nav>
+		<div id="desc">
+			<p>
+				HI I'm Albert.<br>
+				I am a <span>Software Developer.</span>
+			</p>
+		</div>
+		<div id="projects">
+			<div class="project-items">
+				Baconbnb
+			</div>
+			<div class="project-items">
+				Medigo
+			</div>
+			<div class="project-items">
+				NoiseAlert
+			</div>
+			<div class="project-items">
+				something else
+			</div>
 
-	<div class="social-media">
-		<div class="social-media__block social-media__facebook"></div>
-		<div class="social-media__block social-media__github"></div>
-		<div class="social-media__block social-media__linkedin"></div>
+		</div>
 	</div>
-	<div class="bottom-blur">
-	</div>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/pagetransitions.js"></script> -->
-	<script src="scripts/main.js"></script>
+	<script src="scripts/new.js"></script>
 </body>
-<footer>
-	Copyright &copy; 2014 SomeNonExistentCompany. All rights reserved.
-</footer>
 </html>

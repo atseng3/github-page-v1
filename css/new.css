@@ -138,6 +138,15 @@ nav .contact:before {
 nav .contact:hover:before {
   color: #c84e4b;
 }
+#projects {
+  display: none;
+}
+#projects .project-items {
+  float: right;
+  width: 100px;
+  height: 100px;
+  background: rgba(0,0,0,0.6);
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
