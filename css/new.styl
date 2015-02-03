@@ -28,12 +28,20 @@ body
 	top 0
 	left 0
 	text-align left
-	p
-		margin-left 100px
-		font-weight 400
-	  color rgba(0, 0, 0, 60%)
-	  font-size 40px
-	  line-height 40px
+p
+	margin-left 100px
+	font-weight 400
+	color rgba(0,0,0, 0.6)
+	// opacity 0.6
+	font-size 40px
+	line-height 55px
+	// top 20%
+	position absolute
+	top 45%
+	span
+		// display inline-block
+		color	rgba(200,78,75, 1)
+		// opacity 1
 #background
 	background: url('images/pic_gradient.jpg') no-repeat
 	background-position right 25%
@@ -55,11 +63,27 @@ nav
 	left 0
 	text-align center
 	.nav-items
-		width 100px
-		height 100px
+		height 80px
 		color #FFF
 		font-size 20px
 		line-height	25px
+		padding 10px 0px
+		position relative
+		cursor pointer
+	.logo
+		background #7AB3B5
+	.logo:before
+		@extends $icon
+		content "\e60e"
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		margin auto
+		height 42px
+		color #FFF
+		font-size 40px
 	.projects:before
 		@extends $icon
 		content "\e607"

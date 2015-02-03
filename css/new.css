@@ -1,3 +1,4 @@
+nav .logo:before,
 nav .projects:before,
 nav .contact:before {
   font-family: 'icomoon';
@@ -28,13 +29,18 @@ body {
   top: 0;
   left: 0;
   text-align: left;
-  color: rgba(0,0,0,0.6);
-  font-size: 40px;
-  line-height: 40px;
 }
-body p {
+p {
   margin-left: 100px;
   font-weight: 400;
+  color: rgba(0,0,0,0.6);
+  font-size: 40px;
+  line-height: 55px;
+  position: absolute;
+  top: 45%;
+}
+p span {
+  color: #c84e4b;
 }
 #background {
   background: url("images/pic_gradient.jpg") no-repeat;
@@ -58,11 +64,28 @@ nav {
   text-align: center;
 }
 nav .nav-items {
-  width: 100px;
-  height: 100px;
+  height: 80px;
   color: #fff;
   font-size: 20px;
   line-height: 25px;
+  padding: 10px 0px;
+  position: relative;
+  cursor: pointer;
+}
+nav .logo {
+  background: #7ab3b5;
+}
+nav .logo:before {
+  content: "\e60e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 42px;
+  color: #fff;
+  font-size: 40px;
 }
 nav .projects:before {
   content: "\e607";
