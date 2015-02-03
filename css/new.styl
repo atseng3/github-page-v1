@@ -39,8 +39,9 @@ p
 	top 41%
 	// top 7%
 	// text-shadow 0px 0px 5px #000
+	z-index 1
 	transform translateX(-200%)
-	animation slideLeft 1.5s
+	animation slideRight 1.5s
 	animation-delay 1s
 	animation-fill-mode both
 	span
@@ -67,7 +68,8 @@ nav
 	top 0
 	left 0
 	text-align center
-	animation slideLeft 1.5s
+	z-index 3
+	animation slideRight 1.5s
 	
 	.nav-brand
 		height 80px
@@ -97,9 +99,10 @@ nav
 	.nav-list__items
 		display block
 		text-decoration none
+		text-transform uppercase
 		height 80px
 		color #FFF
-		font-size 20px
+		font-size 14px
 		// font-weight 300
 		line-height	25px
 		padding 10px 0px
@@ -125,19 +128,25 @@ nav
 	.contact:hover:before
 		color rgba(200,78,75, 1)
 #projects
-	display none
+	height 100%
+	background rgba(0, 0, 0, 0.6)
+	width 100%
+	position absolute
+	right 0
+	transform translateX(200%)
+	
 	.project-items
-		float right
 		width 100px
 		height 100px
-		background rgba(0, 0, 0, 0.6)
-@keyframes slideLeft
-	0% {
-		transform translateX(-200%)
-	}
-	100% {
-		transform none
-	}
+		// background rgba(0, 0, 0, 0.6)
+			
+.slideLeft
+	animation slideLeft 1.5s
+	animation-fill-mode both
+.fadeOut
+	animation fadeOut 1s
+	animation-delay 1s
+	animation-fill-mode both
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -158,8 +167,6 @@ nav
 	#desc
 		text-align center
 		height 30px
-		// position absolute
-		// top 17%
 		width 100%
 		margin-top 120px
 		
@@ -168,11 +175,6 @@ nav
 		content 'Software Developer'
 		color #FFF
 		font-weight 700
-		// position absolute
-		// top 0
-		// left 0
-		// bottom 0
-		// right 0
 		font-size 25px
 		margin auto
 		text-shadow 0px 1px 1px #000
@@ -217,4 +219,24 @@ nav
 	}
 	100% {
 		transform none
+	}
+@keyframes slideLeft
+	0% {
+	}
+	100% {
+		transform none
+	}
+@keyframes slideRight
+	0% {
+		transform translateX(-200%)
+	}
+	100% {
+		transform none
+	}
+@keyframes fadeOut
+	from {
+		opacity 1
+	}
+	to {
+		opacity 0
 	}

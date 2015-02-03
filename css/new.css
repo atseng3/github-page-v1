@@ -37,11 +37,12 @@ p {
   line-height: 55px;
   position: absolute;
   top: 41%;
+  z-index: 1;
   -webkit-transform: translateX(-200%);
       -ms-transform: translateX(-200%);
           transform: translateX(-200%);
-  -webkit-animation: slideLeft 1.5s;
-          animation: slideLeft 1.5s;
+  -webkit-animation: slideRight 1.5s;
+          animation: slideRight 1.5s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-animation-fill-mode: both;
@@ -71,8 +72,9 @@ nav {
   top: 0;
   left: 0;
   text-align: center;
-  -webkit-animation: slideLeft 1.5s;
-          animation: slideLeft 1.5s;
+  z-index: 3;
+  -webkit-animation: slideRight 1.5s;
+          animation: slideRight 1.5s;
 }
 nav .nav-brand {
   height: 80px;
@@ -105,9 +107,10 @@ nav .nav-list {
 nav .nav-list__items {
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
   height: 80px;
   color: #fff;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 25px;
   padding: 10px 0px;
   position: relative;
@@ -139,13 +142,32 @@ nav .contact:hover:before {
   color: #c84e4b;
 }
 #projects {
-  display: none;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
 }
 #projects .project-items {
-  float: right;
   width: 100px;
   height: 100px;
-  background: rgba(0,0,0,0.6);
+}
+.slideLeft {
+  -webkit-animation: slideLeft 1.5s;
+          animation: slideLeft 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.fadeOut {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -220,26 +242,6 @@ nav .contact:hover:before {
   }
 }
 /* Smartphones (landscape) ----------- */
-@-webkit-keyframes slideLeft {
-  0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-@keyframes slideLeft {
-  0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
-  }
-  100% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
 @-webkit-keyframes slideDown {
   0% {
     -webkit-transform: translateY(-200px);
@@ -258,5 +260,53 @@ nav .contact:hover:before {
   100% {
     -webkit-transform: none;
             transform: none;
+  }
+}
+@-webkit-keyframes slideLeft {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes slideLeft {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

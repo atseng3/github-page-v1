@@ -1,7 +1,7 @@
 window.Profile = {
     
     init: function () {
-    	// this.setListeners();
+    	this.setListeners();
     },
 
     setListeners: function() {
@@ -10,9 +10,17 @@ window.Profile = {
 
     handleClick: function(event) {
     	event.preventDefault();
-    	var currentTarget = $(event.currentTarget);
-    	if(currentTarget.hasClass('projects')) {
-    		$('#background').append('<div class="new-stuff">Some new stuff</div>');
+    	var $currentTarget = $(event.currentTarget);
+    	if($currentTarget.hasClass('projects')) {
+    		// debugger
+    		// $('p').addClass('slideLeft');
+    		$('#projects').addClass('slideLeft');
+    		$('#desc').addClass('fadeOut');
+    		// projects = $('#projects');
+    		// if(projects)
+    		// $('#projects').addClass('slideLeft');
+    		// $('#projects').addClass('slideRight');
+    		// $('#desc').addClass('slideLeft');
     	}
     }
 };
