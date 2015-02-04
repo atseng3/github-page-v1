@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+       .__ ___.                  __   
+_____  |  |\_ |__   ____________/  |_ 
+\__  \ |  | | __ \_/ __ \_  __ \   __\
+ / __ \|  |_| \_\ \  ___/|  | \/|  |  
+(____  /____/___  /\___  >__|   |__|  
+     \/         \/     \/            
+
+  Greetings!! Welcome to my site.
+  This site was designed and built by me (All Rights Reserved ;) )
+  Some tech used are:
+  	- React
+	-->
+<html class="" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>A.T | React</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<script src="http://fb.me/react-0.12.2.min.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+</head>
+
+<body>
+
+<h1>React Fundamentals: Accessing Child Properties</h1>
+<hr />
+<div id="container"></div>
+
+<script type="text/jsx">
+	/*** @jsx React.DOM */
+	var APP = React.createClass({
+		render: function() {
+			return (
+				<div>
+					<BButton href="javascript:alert('hello')" className="btn-primary">I <BIcon className="glyphicon-heart"/> React</BButton>
+					<BButton href="javascript:alert('hello')" className="btn-success">I <BIcon className="glyphicon-pencil"/> React</BButton>
+					<BButton href="javascript:alert('hello')" className="btn-danger">I <BIcon className="glyphicon-inbox"/> React</BButton>
+				</div>
+					
+				)
+		}
+	});
+
+	var BButton = React.createClass({
+		render: function() {
+			return this.transferPropsTo(<a className="btn">{this.props.children}</a>)
+		}
+	});
+
+	var BIcon = React.createClass({
+		render: function() {
+			return this.transferPropsTo(<span className="glyphicon"></span>)
+		}
+	})
+
+	React.renderComponent(<APP />, document.getElementById('container'))
+</script>
+</body>
+</html>

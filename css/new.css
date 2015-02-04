@@ -175,6 +175,7 @@ nav .contact:hover:before {
   text-align: center;
 }
 #projects .projects-container .projects-container__items {
+  text-decoration: none;
   cursor: pointer;
   margin: 20px;
   display: inline-block;
@@ -188,6 +189,7 @@ nav .contact:hover:before {
   position: relative;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
+  color: #fff;
 }
 #projects .projects-container .projects-container__items:before {
   color: #fff;
