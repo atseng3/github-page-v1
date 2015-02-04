@@ -42,10 +42,10 @@ p {
   -webkit-transform: translateX(-200%);
       -ms-transform: translateX(-200%);
           transform: translateX(-200%);
-  -webkit-animation: slideRight 1.5s;
-          animation: slideRight 1.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: slideRight 1s;
+          animation: slideRight 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -74,10 +74,11 @@ nav {
   left: 0;
   text-align: center;
   z-index: 3;
-  -webkit-animation: slideRight 1.5s;
-          animation: slideRight 1.5s;
+  -webkit-animation: slideRight 1s;
+          animation: slideRight 1s;
 }
 nav .nav-brand {
+  display: block;
   height: 80px;
   color: #fff;
   font-size: 20px;
@@ -163,7 +164,7 @@ nav .contact:hover:before {
   text-transform: uppercase;
   color: #c89f4b;
   font-size: 30px;
-  height: 100px;
+  height: 99px;
   text-align: center;
   border-bottom: 1px solid #fff8eb;
   vertical-align: center;
@@ -273,6 +274,10 @@ nav .contact:hover:before {
     width: 100%;
     margin-top: 120px;
   }
+  #desc.fadeOut {
+    -webkit-animation: none;
+            animation: none;
+  }
   #desc:before {
     display: block;
     content: 'Software Developer';
@@ -323,6 +328,9 @@ nav .contact:hover:before {
   }
   #background {
     max-width: 480px;
+  }
+  #projects {
+    left: 0;
   }
 }
 /* Smartphones (landscape) ----------- */
