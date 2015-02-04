@@ -1,7 +1,8 @@
 nav .logo:before,
 nav .projects:before,
 nav .contact:before,
-#projects .projects-container .projects-container__items:before {
+#projects .projects-container .projects-container__items:before,
+#projects .project-title:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -127,7 +128,7 @@ nav .nav-list__items:hover {
   color: #c84e4b;
 }
 nav .projects:before {
-  content: "\e607";
+  content: "\e608";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
@@ -140,7 +141,7 @@ nav .projects:hover:before {
   color: #c84e4b;
 }
 nav .contact:before {
-  content: "\e60a";
+  content: "\e6ee";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
@@ -201,10 +202,10 @@ nav .contact:hover:before {
           transition: all 0.2s ease;
 }
 #projects .projects-container .mic:before {
-  content: "\e608";
+  content: "\e609";
 }
 #projects .projects-container .tile:before {
-  content: "\e606";
+  content: "\e607";
 }
 #projects .projects-container .subscription:before {
   content: "\e600";
@@ -332,6 +333,14 @@ nav .contact:hover:before {
   }
   #projects {
     left: 0;
+  }
+  #projects .project-title:before {
+    content: "\e8b1";
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
   }
 }
 /* Smartphones (landscape) ----------- */

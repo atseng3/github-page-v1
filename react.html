@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+       .__ ___.                  __   
+_____  |  |\_ |__   ____________/  |_ 
+\__  \ |  | | __ \_/ __ \_  __ \   __\
+ / __ \|  |_| \_\ \  ___/|  | \/|  |  
+(____  /____/___  /\___  >__|   |__|  
+     \/         \/     \/            
+
+  Greetings!! Welcome to my site.
+  This site was designed and built by me (All Rights Reserved ;) )
+  Some tech used are:
+  	- React
+	-->
+<html class="" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>A.T</title>
+	<script src="http://fb.me/react-0.12.2.min.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+</head>
+
+<body>
+
+
+
+<script type="text/jsx">
+	/*** @jsx React.DOM */
+	var APP = React.createClass({
+
+		// states
+		getInitialState:function() {
+			return {
+				red: 0,
+				green: 0,
+				blue: 0
+			}
+			// return { txt: 'asdfasdfasdfasdf' }
+		},
+		update: function(e) {
+			this.setState({
+				red: this.refs.red.refs.range.getDOMNode().value,
+				green: this.refs.green.refs.range.getDOMNode().value,
+				blue: this.refs.blue.refs.range.getDOMNode().value
+			})
+			// this.setState({ txt: e.target.value })
+		},
+
+
+		// props
+		getDefaultProps: function() {
+			return {
+				txt: 'asdf',
+				cat: 0
+			}
+		},
+		propTypes: {
+			txt: React.PropTypes.string,
+			cat: React.PropTypes.number.isRequired
+		},
+
+
+
+		render: function() {
+			console.log(this.props.txt)
+			return (
+					<div>
+						<hr />
+						<Slider ref="red" update={this.update} />
+						<label>{this.state.red}</label>
+						<Slider ref="green" update={this.update} />
+						<label>{this.state.green}</label>
+						<Slider ref="blue" update={this.update} />
+						<label>{this.state.blue}</label>
+					</div>
+				)
+		}
+	});
+
+	var Slider = React.createClass({
+		render: function() {
+			return (
+					<div>
+						<input ref="range" type="range" min="0" max="255" onChange={this.props.update} />
+						
+					</div>
+				)
+		}
+	});
+
+	React.renderComponent(<APP />, document.body)
+</script>
+</body>
+</html>

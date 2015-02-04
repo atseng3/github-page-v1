@@ -116,7 +116,7 @@ nav
 			color rgba(200,78,75, 1)
 	.projects:before
 		@extends $icon
-		content "\e607"
+		content "\e608"
 		color #FFF
 		font-size 40px
 		transition all 0.2s ease
@@ -126,7 +126,7 @@ nav
 		color rgba(200,78,75, 1)
 	.contact:before
 		@extends $icon
-		content "\e60a"
+		content "\e6ee"
 		color #FFF
 		font-size 40px
 		transition all 0.2s ease
@@ -180,9 +180,9 @@ nav
 			margin 50px
 			transition all 0.2s ease
 		.mic:before
-			content "\e608"
+			content "\e609"
 		.tile:before
-			content "\e606"
+			content "\e607"
 		.subscription:before
 			content "\e600"
 		.baconbnb:before
@@ -285,8 +285,16 @@ nav
 		
 	// incomplete
 	#projects
-		// display none
 		left 0
+		.project-title:before
+			@extends $icon
+			content "\e8b1"
+			color #FFF
+			font-size 30px
+			position absolute
+			top 35px
+			right 20px
+		
 
 /* Smartphones (landscape) ----------- */
 @keyframes slideDown
