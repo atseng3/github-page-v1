@@ -15,14 +15,15 @@ _____  |  |\_ |__   ____________/  |_
 <html class="" lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>A.T</title>
+	<title>A.T | React</title>
 	<script src="http://fb.me/react-0.12.2.min.js"></script>
 	<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
 </head>
 
 <body>
 
-
+<h1>First try React</h1>
+<div id="container"></div>
 
 <script type="text/jsx">
 	/*** @jsx React.DOM */
@@ -88,7 +89,7 @@ _____  |  |\_ |__   ____________/  |_
 		}
 	});
 
-	React.renderComponent(<APP />, document.body)
+	React.renderComponent(<APP />, document.getElementById('container'))
 </script>
 </body>
 </html>
