@@ -3,6 +3,7 @@ window.Profile = {
     init: function () {
     	this.setListeners();
     	this.simpleRouting();
+    	this.mySort([2, 4, 3, 5, 1]);
     },
 
     simpleRouting: function() {
@@ -42,6 +43,34 @@ window.Profile = {
 				$desc.removeClass('fadeIn');
 	  		$desc.addClass('fadeOut');
     	}
+    },
+
+    mySort: function(arr) {
+    	length = arr.length
+		 	for(var i = 0; i < arr.length; i++) {
+			 	this.helper(arr, i);
+		 	}
+    },
+
+    helper: function(arr, i) {
+    	var max = 0;
+			var index = i;
+			for(var j = 0; j < arr.length - i; j++) {
+				if(arr[j] > max) {
+					max = arr[j];
+					index = j;
+				}
+			}
+			var indexTo = arr.length - 1 - i;
+			this.swap(arr, index, indexTo);
+    },
+
+    swap: function(arr, indexFrom, indexTo) {
+    	var prevVal = arr[indexTo];
+    	var newVal = arr[indexFrom];
+    	arr[indexTo] = newVal;
+    	arr[indexFrom] = prevVal;
+    	console.log(arr)
     }
 };
 
