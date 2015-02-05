@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="197px" height="67px" viewBox="0 0 197 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="page" stroke="#979797" sketch:type="MSShapeGroup" x="-404" y="-260" width="1037" height="773"></rect>
+        <text id="Medig" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="52" font-weight="260">
+            <tspan x="5" y="47" fill="#0266C8">M</tspan>
+            <tspan x="52.112" y="47" fill="#F90101">e</tspan>
+            <tspan x="81.024" y="47" fill="#F2B50F">d</tspan>
+            <tspan x="113.576" y="47" fill="#00933B">i</tspan>
+            <tspan x="125.328" y="47" fill="#F90101">g</tspan>
+        </text>
+        <g id="tablet" sketch:type="MSLayerGroup" transform="translate(160.000000, 19.000000)">
+            <circle id="Oval-1" fill="#66CFE2" sketch:type="MSShapeGroup" cx="15" cy="15" r="15"></circle>
+            <path d="M5.49066287,23.3013323 L22.575122,5.74557771 L24.7106794,7.94004703 L7.62622027,25.4958016 L5.49066287,23.3013323 L5.49066287,23.3013323 Z" id="Rectangle-5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
