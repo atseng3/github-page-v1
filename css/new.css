@@ -30,6 +30,7 @@ body {
   top: 0;
   left: 0;
   text-align: left;
+  overflow: scroll;
 }
 p {
   margin-left: 152px;

@@ -3,19 +3,12 @@ window.Profile = {
     init: function () {
     	this.setListeners();
     	this.simpleRouting();
-    	// this.mySort([2, 4, 3, 5, 1]);
     },
 
     simpleRouting: function() {
     	var hash = window.location.hash;
     	if(hash.match(/projects/)) {
     		this.showProjectsPage();
-    		// if(window.innerWidth < 480) {
-    		// 	$('nav').hide();
-    		// 	$('#desc').hide();
-    		// }
-    	} else {
-    		// this.showHomePage();
     	}
     },
 
