@@ -1,4 +1,4 @@
-body #container .search-container:after {
+body #container .search-container:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -21,6 +21,7 @@ body #container .search-container:after {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow: hidden;
 }
 body #container {
   background-image: url("images/visualizer-background.png");
@@ -41,6 +42,7 @@ body #container input#search-youtube {
   width: 500px;
   font-weight: 100;
   font-size: 25px;
+  height: 47px;
   color: #f2f2f2;
 }
 body #container ::-webkit-input-placeholder {
@@ -55,7 +57,7 @@ body #container ::-moz-placeholder {
 body #container :-ms-placeholder {
   color: rgba(242,242,242,0.3);
 }
-body #container .search-container:after {
+body #container .search-container:before {
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -78,8 +80,12 @@ body #container .search-container .search-container__autocomplete {
 body #container .search-container .search-container__autocomplete .autocomplete__items {
   background: rgba(0,0,0,0.5);
   color: #f2f2f2;
-  height: 50px;
+  height: 60px;
   text-align: left;
+  padding: 5px;
+}
+body #container .search-container .search-container__autocomplete .autocomplete__items.hover {
+  background: rgba(0,0,0,0.7);
 }
 body #container .search-container .search-container__autocomplete .autocomplete__items .img {
   float: left;
@@ -94,8 +100,19 @@ body #container .search-container .search-container__autocomplete .autocomplete_
   _overflow: visible;
   zoom: 1;
 }
-body #container .sound:hover:before {
+body #container .search-container:hover:before {
   color: #f2f2f2;
+}
+body #container iframe {
+  display: none;
+}
+body #container #nowPlaying {
+  color: #f2f2f2;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 100;
+  cursor: pointer;
 }
 body #container #visualizer-icon {
   background: url("images/waterdrop.png") center no-repeat;
