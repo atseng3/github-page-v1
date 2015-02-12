@@ -49,12 +49,45 @@ body
 			color rgba(242,242,242, 0.3)
 		:-ms-placeholder
 			color rgba(242,242,242, 0.3)
-		.sound:before
+		// .sound:before
+		.search-container:after
 			@extends $icon
-			float right
+			cursor pointer
+			position absolute
+			right 0
 			content "\e74f"
-			color #FFF
+			color rgba(242,242,242, 0.3)
 			font-size 40px
+		.search-container
+			position relative
+			.search-container__autocomplete
+				position absolute
+				top 110%
+				left 0
+				right 0
+				width	500px
+				margin auto
+				border 1px solid rgba(0, 0, 0, 1)
+				.autocomplete__items
+					background rgba(0, 0, 0, 0.5)
+					color rgba(242,242,242, 1)
+					height 50px
+					text-align left
+					.img
+						float	left
+						margin-right 10px
+					img
+						height 50px
+						display block
+						
+					div
+						overflow hidden
+						_overflow visible
+						zoom 1
+
+
+		.sound:hover:before
+			color rgba(242,242,242, 1)
 		#visualizer-icon
 			background url('images/waterdrop.png') center no-repeat
 			background-size contain
