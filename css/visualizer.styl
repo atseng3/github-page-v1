@@ -55,9 +55,9 @@ body
 			@extends $icon
 			cursor pointer
 			position absolute
-			right 0
+			left 0
 			content "\e74f"
-			color rgba(242,242,242, 0.3)
+			color rgba(242,242,242, 1)
 			font-size 40px
 			// &:hover
 			// 	color rgba(242,242,242, 1)
@@ -96,6 +96,16 @@ body
 			color rgba(242,242,242, 1)
 		iframe
 			display none
+		#upload
+			background transparent
+			border none
+		#upload:before
+			@extends $icon
+			cursor pointer
+			content "\e7ba"
+			font-size 40px
+			color rgba(242, 242, 242, 1)
+			background transparent
 		#nowPlaying
 			color rgba(242,242,242, 1)
 			height 50px

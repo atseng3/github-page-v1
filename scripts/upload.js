@@ -1,28 +1,5 @@
-var APP = React.createClass({
-  process: function() {
-  },
-
-  render: function() {
-    this.process();
-    return (
-    	<div>
-    		<SearchYoutube />
-    		<div id="visualizer-icon"></div>
-        <audio src="last-ones-standing.mp3" autoPlay ></audio>
-    		<progress max="100" value="80"></progress>
-    	</div>
-    )
-    // <audio src="last-ones-standing.mp3" controls preload="auto"></audio>;
-  }
-});
-
-React.render(
-  <APP />,
-  document.getElementById('container')
-);
-
 var process = function() {
-    // $('body').prepend('<audio src="last-ones-standing.mp3" autoplay controls ></audio>');
+		// $('body').prepend('<audio src="last-ones-standing.mp3" autoplay controls ></audio>');
     var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     var myAudio = document.querySelector('audio');
     // var pre = document.querySelector('pre');
@@ -62,4 +39,4 @@ var process = function() {
     gainNode.connect(audioCtx.destination);
 }
 
-process()
+// process();

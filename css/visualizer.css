@@ -1,4 +1,5 @@
-body #container .search-container:before {
+body #container .search-container:before,
+body #container #upload:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -60,9 +61,9 @@ body #container :-ms-placeholder {
 body #container .search-container:before {
   cursor: pointer;
   position: absolute;
-  right: 0;
+  left: 0;
   content: "\e74f";
-  color: rgba(242,242,242,0.3);
+  color: #f2f2f2;
   font-size: 40px;
 }
 body #container .search-container {
@@ -105,6 +106,17 @@ body #container .search-container:hover:before {
 }
 body #container iframe {
   display: none;
+}
+body #container #upload {
+  background: transparent;
+  border: none;
+}
+body #container #upload:before {
+  cursor: pointer;
+  content: "\e7ba";
+  font-size: 40px;
+  color: #f2f2f2;
+  background: transparent;
 }
 body #container #nowPlaying {
   color: #f2f2f2;
