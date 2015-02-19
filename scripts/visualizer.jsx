@@ -27,6 +27,53 @@ var Canvas = React.createClass({
     // this.streamInit();
   },
 
+  init: function() {
+    this.doAudioSetup();
+    var myAudio = document.querySelector('audio');
+    source = this.audioCtx.createMediaElementSource(myAudio);
+    source.connect(this.analyser);
+    this.doCanvasSetup();
+    this.draw();
+    source.connect(this.audioCtx.destination);
+  },
+
+  streamInit: function() {
+    navigator.getUserMedia = (navigator.getUserMedia ||
+                              navigator.webkitGetUserMedia ||
+                              navigator.mozGetUserMedia ||
+                              navigator.msGetUserMedia);
+
+    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    // getUserMedia block - grab stream
+    // put it into a MediaStreamAudioSourceNode
+    // also output the visuals into a video element
+
+    if (navigator.getUserMedia) {
+      var that = this;
+       navigator.getUserMedia (
+          {
+             audio: true,
+             video: false
+          }, 
+          function(stream) {
+            that.streamSuccess(stream);
+          },
+          function(err) {
+            console.log('error');
+          }
+        );
+     }
+  },
+
+  streamSuccess: function(stream) {
+    this.doAudioSetup();
+    var source = this.audioCtx.createMediaStreamSource(stream);
+    source.connect(this.analyser);
+    this.doCanvasSetup();
+    this.draw();
+  },
+
   doAudioSetup: function() {
     this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     this.analyser = this.audioCtx.createAnalyser();
@@ -96,53 +143,6 @@ var Canvas = React.createClass({
     this.canvasCtx.fillRect(WIDTH / 2 - 1, HEIGHT / 2 - 1, this.barWidth, volume);
     // top bar
     this.canvasCtx.fillRect(WIDTH / 2 - 1, HEIGHT / 2 - 1, this.barWidth, -volume);
-  },
-
-  streamSuccess: function(stream) {
-    this.doAudioSetup();
-    var source = this.audioCtx.createMediaStreamSource(stream);
-    source.connect(this.analyser);
-    this.doCanvasSetup();
-    this.draw();
-  },
-
-  streamInit: function() {
-    navigator.getUserMedia = (navigator.getUserMedia ||
-                              navigator.webkitGetUserMedia ||
-                              navigator.mozGetUserMedia ||
-                              navigator.msGetUserMedia);
-
-    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-    // getUserMedia block - grab stream
-    // put it into a MediaStreamAudioSourceNode
-    // also output the visuals into a video element
-
-    if (navigator.getUserMedia) {
-      var that = this;
-       navigator.getUserMedia (
-          {
-             audio: true,
-             video: false
-          }, 
-          function(stream) {
-            that.streamSuccess(stream);
-          },
-          function(err) {
-            console.log('error');
-          }
-        );
-     }
-  },
-
-  init: function() {
-    this.doAudioSetup();
-    var myAudio = document.querySelector('audio');
-    source = this.audioCtx.createMediaElementSource(myAudio);
-    source.connect(this.analyser);
-    this.doCanvasSetup();
-    this.draw();
-    source.connect(this.audioCtx.destination);
   },
 
   render: function() {
