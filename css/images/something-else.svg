@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="104px" height="59px" viewBox="0 0 104 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic" result="blur"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <circle id="Oval-7" stroke="#3E4478" stroke-width="8" filter="url(#filter-1)" sketch:type="MSShapeGroup" cx="52" cy="30" r="125"></circle>
+        <path d="M67.6592936,12.201287 L103.092755,12.201287 L103.092755,0.000484792904 L57.5622063,0.000484792904 L57.5622063,6.60925264 L57.5622063,58.9710286 L67.6592936,58.9710286 L67.6592936,12.201287 Z M44.0972821,12.7277734 C24.8473653,16.6373686 10.1957794,35.8339232 10.0019461,59 L0.00131722829,59 C0.000439569159,58.858205 0,58.7162903 0,58.5742574 C0,26.2245883 22.8028648,0 50.9316239,0 C50.9544195,0 50.9772115,1.7222916e-05 51,5.16580504e-05 L51,4.79502139e-05 L51,0.00651464267 L51.0607096,0 L54.0149949,0 L54.0149951,59 L44.0972821,59 L44.0972821,12.7277734 Z" id="Oval-6" fill="#BDC3F7" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
