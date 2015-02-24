@@ -1,3 +1,32 @@
+// var Player = React.createClass({
+
+// 	getInitialState: function() {
+// 		return {
+// 			upload: true,
+// 			stream: false
+// 		}
+// 	},
+
+// 	changeSong: function() {
+// 		// show the two icons and change song
+// 	},
+
+// 	render: function() {
+// 		var nowPlaying = '';
+// 		var audioSrc = '';
+// 		if(this.state.upload) {
+// 			nowPlaying = <div onClick={this.changeSong}>{this.state.songTitle}</div>;
+//       audioSrc = <audio src="love-me-like-you-do.mp3" autoPlay></audio>;
+// 		}
+// 		return (
+// 			<div>
+// 				{nowPlaying}
+// 				{audioSrc}
+// 			</div>
+// 		)
+// 	}
+// });
+
 var SearchYoutube = React.createClass({
 
 	getInitialState:function() {
@@ -113,6 +142,9 @@ var SearchYoutube = React.createClass({
 			var src = "https://www.youtube.com/embed/" + this.state.selected.id.videoId +"?autoplay=1&autohide=0";
 			iframe = <iframe id="ytplayer" type="text/html" width="720" height="405" src={src} frameborder="0" allowfullscreen></iframe>;
 			nowPlaying = <div onClick={this.wantToSearch} id="nowPlaying">{this.state.selected.snippet.title}</div>
+			header = nowPlaying;
+		} else if(this.props.source == 'upload') {
+			nowPlaying = <div onClick={this.wantToSearch} id="nowPlaying">{this.props.sourceName}</div>
 			header = nowPlaying;
 		} else {
 			header = (

@@ -28,7 +28,7 @@ body {
   overflow: hidden;
 }
 body #container {
-  background-image: url("images/something-else-red.svg");
+  background-image: url("images/logo-skinny.svg");
   background-color: #000;
   background-size: auto;
   background-repeat: no-repeat;
@@ -111,13 +111,17 @@ body #container .search-container:hover:before {
 body #container iframe {
   display: none;
 }
+body #container .song-upload-container {
+  height: 0;
+  overflow: hidden;
+}
 body #container #upload {
   background: transparent;
   border: none;
 }
 body #container #upload:before {
   cursor: pointer;
-  content: "\e7ba";
+  content: "\e7b8";
   font-size: 40px;
   color: #f2f2f2;
   background: transparent;
