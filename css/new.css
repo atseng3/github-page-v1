@@ -351,12 +351,6 @@ nav .contact:hover:before {
     width: 100%;
     margin-top: 60%;
     margin-bottom: 20px;
-    -webkit-animation: slideDown 1s;
-            animation: slideDown 1s;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
   }
   nav#desktop-nav {
     display: none;
