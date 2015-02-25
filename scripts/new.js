@@ -39,9 +39,7 @@ window.Profile = {
     },
 
     hideMobileNav: function(event) {
-        if($(event.target).hasClass('mobile-nav-mask')) {
-            $('.mobile-nav-mask').hide();
-        }
+        $('.mobile-nav-mask').hide();
     },
 
     showMobileNav: function(event) {

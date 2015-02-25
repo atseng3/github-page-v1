@@ -83,7 +83,7 @@ div#mobile-header
 .mobile-nav-mask
 	display none
 	#mobile-nav
-		width 300px
+		width 250px
 		background #424242
 		.nav-list__items	
 			line-height	40px
@@ -301,6 +301,8 @@ nav
 		width 100%
 		margin-top 60%
 		margin-bottom 20px
+		&.fadeOut
+			margin 0
 		// animation slideDown 1s
 		// animation-delay 1s
 		// animation-fill-mode forward
@@ -356,23 +358,10 @@ nav
 			display none
 	#background
 		max-width 480px
-		
-	// incomplete
+	#profile
+		left 0
 	#projects
 		left 0
-		.project-title:before
-			@extends $icon
-			content "\e8b1"
-			color #FFF
-			font-size 30px
-			position absolute
-			top 35px
-			right 20px
-		// .projects-container
-		// 	.projects-container__items
-		// 		// cursor pointer
-		// 		width 100px
-		// 		height 125px
 		
 
 /* Smartphones (landscape) ----------- */

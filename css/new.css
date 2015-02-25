@@ -4,8 +4,7 @@ nav .projects:before,
 nav .contact:before,
 #projects .projects-container .projects-container__items:before,
 div#mobile-header #mobile-nav-icon:before,
-div#mobile-header .logo:before,
-#projects .project-title:before {
+div#mobile-header .logo:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -90,7 +89,7 @@ div#mobile-header {
   display: none;
 }
 .mobile-nav-mask #mobile-nav {
-  width: 300px;
+  width: 250px;
   background: #424242;
 }
 .mobile-nav-mask #mobile-nav .nav-list__items {
@@ -352,6 +351,9 @@ nav .contact:hover:before {
     margin-top: 60%;
     margin-bottom: 20px;
   }
+  #desc.fadeOut {
+    margin: 0;
+  }
   nav#desktop-nav {
     display: none;
   }
@@ -407,16 +409,11 @@ nav .contact:hover:before {
   #background {
     max-width: 480px;
   }
-  #projects {
+  #profile {
     left: 0;
   }
-  #projects .project-title:before {
-    content: "\e8b1";
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    top: 35px;
-    right: 20px;
+  #projects {
+    left: 0;
   }
 }
 /* Smartphones (landscape) ----------- */
