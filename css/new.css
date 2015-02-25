@@ -1,7 +1,9 @@
-nav .logo:before,
-nav .projects:before,
-nav .contact:before,
+nav#desktop-nav .logo:before,
+nav#desktop-nav .profile:before,
+nav#desktop-nav .projects:before,
+nav#desktop-nav .contact:before,
 #projects .projects-container .projects-container__items:before,
+div#mobile-header .logo:before,
 #projects .project-title:before {
   font-family: 'icomoon';
   speak: none;
@@ -32,7 +34,7 @@ body {
   text-align: left;
   overflow: scroll;
 }
-p {
+#desc p {
   margin-left: 152px;
   font-weight: 300;
   color: #fff;
@@ -41,19 +43,32 @@ p {
   position: absolute;
   top: 41%;
   z-index: 1;
-  -webkit-transform: translateX(-200%);
-      -ms-transform: translateX(-200%);
-          transform: translateX(-200%);
-  -webkit-animation: slideRight 1s;
-          animation: slideRight 1s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
-p span {
+#desc p span {
   font-weight: 700;
   text-shadow: 0px 0px 1px #000;
+}
+#desc p #learn-more {
+  color: #fff;
+  font-weight: 100;
+  font-size: 20px;
+  background: rgba(0,0,0,0.6);
+  border: 1px inset #000;
+  display: block;
+  width: 170px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 150px;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  text-shadow: none;
+  text-decoration: none;
+}
+#desc p #learn-more:hover {
+  background: #fff;
+  color: #000;
 }
 #background {
   background: url("images/profileHD-compressor.jpg") no-repeat;
@@ -67,7 +82,10 @@ p span {
   top: 0;
   left: 0;
 }
-nav {
+div#mobile-header {
+  display: none;
+}
+nav#desktop-nav {
   background: rgba(0,0,0,0.6);
   position: fixed;
   width: 100px;
@@ -76,10 +94,10 @@ nav {
   left: 0;
   text-align: center;
   z-index: 3;
-  -webkit-animation: slideRight 1s;
-          animation: slideRight 1s;
+  -webkit-animation: slideRight 0.5s;
+          animation: slideRight 0.5s;
 }
-nav .nav-brand {
+nav#desktop-nav .nav-brand {
   display: block;
   height: 80px;
   color: #fff;
@@ -89,11 +107,11 @@ nav .nav-brand {
   position: relative;
   cursor: pointer;
 }
-nav .logo {
+nav#desktop-nav .logo {
   background: #7ab3b5;
 }
-nav .logo:before {
-  content: "\e60e";
+nav#desktop-nav .logo:before {
+  content: "\e60f";
   position: absolute;
   top: 0;
   left: 0;
@@ -104,11 +122,11 @@ nav .logo:before {
   color: #fff;
   font-size: 40px;
 }
-nav .nav-list {
+nav#desktop-nav .nav-list {
   height: 90%;
   margin-top: 50px;
 }
-nav .nav-list__items {
+nav#desktop-nav .nav-list__items {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -122,34 +140,65 @@ nav .nav-list__items {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav .nav-list__items.selected {
+nav#desktop-nav .nav-list__items.selected {
   color: #c84e4b;
 }
-nav .nav-list__items:hover {
+nav#desktop-nav .nav-list__items:hover {
   color: #c84e4b;
 }
-nav .projects:before {
+nav#desktop-nav .profile:before {
+  content: "\e89b";
+  color: #fff;
+  font-size: 40px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+nav#desktop-nav .profile:hover:before {
+  color: #c84e4b;
+}
+nav#desktop-nav .projects:before {
   content: "\e608";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav .projects:before.selected {
+nav#desktop-nav .projects:before.selected {
   color: #c84e4b;
 }
-nav .projects:hover:before {
+nav#desktop-nav .projects:hover:before {
   color: #c84e4b;
 }
-nav .contact:before {
+nav#desktop-nav .contact:before {
   content: "\e6ee";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav .contact:hover:before {
+nav#desktop-nav .contact:hover:before {
   color: #c84e4b;
+}
+#profile {
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  left: 100px;
+  right: 0;
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  color: #fff;
+}
+#profile .profile-title {
+  text-transform: uppercase;
+  color: #c89f4b;
+  font-size: 30px;
+  height: 99px;
+  text-align: center;
+  border-bottom: 1px solid #fff8eb;
+  vertical-align: center;
+  line-height: 100px;
 }
 #projects {
   height: 100%;
@@ -247,8 +296,8 @@ nav .contact:hover:before {
 .fadeIn {
   -webkit-animation: fadeIn 0.2s;
           animation: fadeIn 0.2s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -298,13 +347,20 @@ nav .contact:hover:before {
     -webkit-animation: none;
             animation: none;
   }
-  nav {
+  nav#desktop-nav {
+    display: none;
+  }
+  div#mobile-header {
+    text-align: center;
+    display: block;
+    background: rgba(0,0,0,0.6);
     width: 100%;
     height: 100px;
     -webkit-animation: slideDown 1.5s;
             animation: slideDown 1.5s;
   }
-  nav .nav-brand {
+  div#mobile-header .nav-brand {
+    display: block;
     height: 80px;
     color: #fff;
     font-size: 20px;
@@ -313,11 +369,11 @@ nav .contact:hover:before {
     position: relative;
     cursor: pointer;
   }
-  nav .logo {
+  div#mobile-header .logo {
     background: none;
   }
-  nav .logo:before {
-    content: "\e60e";
+  div#mobile-header .logo:before {
+    content: "\e60f";
     position: absolute;
     top: 0;
     left: 0;
@@ -328,7 +384,7 @@ nav .contact:hover:before {
     color: #fff;
     font-size: 40px;
   }
-  nav .nav-list {
+  div#mobile-header .nav-list {
     display: none;
   }
   #background {
@@ -349,8 +405,8 @@ nav .contact:hover:before {
 /* Smartphones (landscape) ----------- */
 @-webkit-keyframes slideDown {
   0% {
-    -webkit-transform: translateY(-400px);
-            transform: translateY(-400px);
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
   }
   100% {
     -webkit-transform: none;
@@ -359,8 +415,8 @@ nav .contact:hover:before {
 }
 @keyframes slideDown {
   0% {
-    -webkit-transform: translateY(-400px);
-            transform: translateY(-400px);
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
   }
   100% {
     -webkit-transform: none;

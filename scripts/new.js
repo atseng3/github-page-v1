@@ -1,5 +1,20 @@
 window.Profile = {
-    
+
+    pages: {
+        'profile': {
+            in: 'slideLeft',
+            out: 'slideRightOut'
+        },
+        'projects': {
+            in: 'slideLeft',
+            out: 'slideRightOut'
+        },
+        'desc': {
+            in: 'fadeIn',
+            out: 'fadeOut'
+        }
+    },
+
     init: function () {
     	this.setListeners();
     	this.simpleRouting();
@@ -9,44 +24,71 @@ window.Profile = {
     	var hash = window.location.hash;
     	if(hash.match(/projects/)) {
     		this.showProjectsPage();
-    	}
+    	} else if(hash.match(/profile/)) {
+            this.showProfilePage();
+        }
     },
 
     setListeners: function() {
     	$('.projects').on('click', this.showProjectsPage);
     	$('.logo').on('click', this.showHomePage);
+        $('.profile').on('click', this.showProfilePage);
+        $('#learn-more').on('click', this.showProfilePage);
     },
 
     showHomePage: function(event) {
-    	var $projects = $('#projects');
-    	var $desc = $('#desc');
-    	$projects.removeClass('slideLeft');
-  		$projects.addClass('slideRightOut');
-  		$desc.removeClass('fadeOut');
-  		$desc.addClass('fadeIn');
+        pages = window.Profile.pages
+        for(var page in pages) {
+            var $page = $('#'+page);
+            if(page == 'desc') {
+                $page.removeClass(pages[page].out);
+                $page.addClass(pages[page].in);
+            } else {
+                if($page.hasClass(pages[page].in)) {
+                    $page.removeClass(pages[page].in);
+                    $page.addClass(pages[page].out);
+                }
+            }
+        }
+    },
+
+    showProfilePage: function(event) {
+        pages = window.Profile.pages
+        for(var page in pages) {
+            var $page = $('#'+page);
+            if(page == 'profile') {
+                $page.removeClass(pages[page].out);
+                $page.addClass(pages[page].in);
+            } else {
+                if($page.hasClass(pages[page].in)) {
+                    $page.removeClass(pages[page].in);
+                    $page.addClass(pages[page].out);
+                }
+            }
+        }
     },
 
     showProjectsPage: function(event) {
-    	var $projects = $('#projects');
-    	var $desc = $('#desc');
-    	if($projects.hasClass('slideLeft')) {
-    		$projects.removeClass('slideLeft');
-    		$projects.addClass('slideRightOut');
-    		$desc.removeClass('fadeOut');
-    		$desc.addClass('fadeIn');
-    	} else {
-    		$projects.removeClass('slideRightOut');
-				$projects.addClass('slideLeft');
-				$desc.removeClass('fadeIn');
-	  		$desc.addClass('fadeOut');
-    	}
+        pages = window.Profile.pages
+        for(var page in pages) {
+            var $page = $('#'+page);
+            if(page == 'projects') {
+                $page.removeClass(pages[page].out);
+                $page.addClass(pages[page].in);
+            } else {
+                if($page.hasClass(pages[page].in)) {
+                    $page.removeClass(pages[page].in);
+                    $page.addClass(pages[page].out);
+                }
+            }
+        }
     },
 
     mySort: function(arr) {
     	length = arr.length
-		 	for(var i = 0; i < arr.length; i++) {
-			 	this.helper(arr, i);
-		 	}
+	 	for(var i = 0; i < arr.length; i++) {
+		 	this.helper(arr, i);
+	 	}
     },
 
     helper: function(arr, i) {

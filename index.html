@@ -47,10 +47,17 @@ _____  |  |\_ |__   ____________/  |_
 	<!-- End Google Tag Manager -->
 
 	<div id="background">
-		<nav>
+		<div id="mobile-header">
+			<a href="#" class="nav-brand logo">
+			</a>
+		</div>
+		<nav id="desktop-nav">
 			<a href="#" class="nav-brand logo">
 			</a>
 			<div class="nav-list">
+				<a class="nav-list__items profile" href="#profile"><br>
+					About Me
+				</a>
 				<a class="nav-list__items projects" href="#projects">
 					Projects
 				</a>
@@ -59,10 +66,18 @@ _____  |  |\_ |__   ____________/  |_
 				</a>	
 			</div>
 		</nav>
-		<div id="desc">
+		<div id="desc" class="fadeIn">
 			<p>
 				HI I'm Albert.<br>
 				I am a <span>Software Developer.</span>
+				<a href="#profile" id="learn-more">LEARN MORE</a>
+			</p>
+		</div>
+		<div id="profile">
+			<div class="profile-title">Profile
+			</div>
+			<p class="profile-container">
+				Hi, I'm Albert. I am a Software Developer with an eye for design. I love to create awesome UIs and make ideas come to life. Check out my projects to see more. My skills include Ruby on Rails, PHP, Javascript, Node, and a variety of front-end frameworks. Blah blah blah blah
 			</p>
 		</div>
 		<div id="projects">
@@ -82,8 +97,8 @@ _____  |  |\_ |__   ____________/  |_
 					<div class="projects-container__item-name">Baconbnb</div>
 				</a>
 			</div>
-			
 		</div>
+
 	</div>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
