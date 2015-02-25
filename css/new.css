@@ -3,6 +3,7 @@ nav#desktop-nav .profile:before,
 nav#desktop-nav .projects:before,
 nav#desktop-nav .contact:before,
 #projects .projects-container .projects-container__items:before,
+div#mobile-header #mobile-menu:before,
 div#mobile-header .logo:before,
 #projects .project-title:before {
   font-family: 'icomoon';
@@ -330,6 +331,9 @@ nav#desktop-nav .contact:hover:before {
     text-align: left;
     top: 600%;
   }
+  #desc p #learn-more {
+    font-size: 15px;
+  }
   #desc {
     text-align: center;
     height: 100%;
@@ -358,6 +362,15 @@ nav#desktop-nav .contact:hover:before {
     height: 100px;
     -webkit-animation: slideDown 1.5s;
             animation: slideDown 1.5s;
+  }
+  div#mobile-header #mobile-menu:before {
+    float: left;
+    content: '\e8b6';
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
   }
   div#mobile-header .nav-brand {
     display: block;
