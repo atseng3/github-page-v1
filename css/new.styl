@@ -39,10 +39,6 @@ body
 		position absolute
 		top 41%
 		z-index 1
-		// transform translateX(-200%)
-		// animation fadeIn 1s
-		// animation-delay 1s
-		// animation-fill-mode both
 		span
 			font-weight 700
 			text-shadow: 0px 0px 1px #000;
@@ -84,7 +80,14 @@ body
 	left 0
 div#mobile-header
 	display none
-nav#desktop-nav
+#mobile-nav
+	display none
+	width 300px
+	background #424242
+	.nav-list__items	
+		line-height	40px
+		vertical-align top
+nav
 	background rgba(0, 0, 0, 0.6)
 	position fixed
 	width 100px
@@ -305,6 +308,8 @@ nav#desktop-nav
 	
 	nav#desktop-nav
 		display none
+	#mobile-nav
+		display block
 	div#mobile-header
 		text-align center
 		display block
@@ -312,7 +317,7 @@ nav#desktop-nav
 		width 100%
 		height 100px
 		animation slideDown 1.5s
-		#mobile-menu
+		#mobile-nav-icon
 			&:before
 				float left
 				@extend $icon
@@ -322,7 +327,6 @@ nav#desktop-nav
 				position absolute
 				top 30px
 				left 20px
-				// display inline-block
 				
 		.nav-brand
 			display block
@@ -335,14 +339,6 @@ nav#desktop-nav
 			cursor pointer
 		.logo
 			background none
-		// .logo:after
-		// 	@extend $icon
-		// 	content '\e8b6'
-		// 	color #FFF
-		// 	position absolute
-		// 	font-size 40px
-		// 	left 20px
-		// 	top 25px
 		.logo:before
 			@extends $icon
 			content "\e60f"

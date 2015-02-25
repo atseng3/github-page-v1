@@ -34,6 +34,11 @@ window.Profile = {
     	$('.logo').on('click', this.showHomePage);
         $('.profile').on('click', this.showProfilePage);
         $('#learn-more').on('click', this.showProfilePage);
+        $('#mobile-nav-icon').on('click', this.showMobileNav);
+    },
+
+    showMobileNav: function(event) {
+        // show the mobile menu --> same as desktop nav
     },
 
     showHomePage: function(event) {

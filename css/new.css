@@ -1,9 +1,9 @@
-nav#desktop-nav .logo:before,
-nav#desktop-nav .profile:before,
-nav#desktop-nav .projects:before,
-nav#desktop-nav .contact:before,
+nav .logo:before,
+nav .profile:before,
+nav .projects:before,
+nav .contact:before,
 #projects .projects-container .projects-container__items:before,
-div#mobile-header #mobile-menu:before,
+div#mobile-header #mobile-nav-icon:before,
 div#mobile-header .logo:before,
 #projects .project-title:before {
   font-family: 'icomoon';
@@ -86,7 +86,16 @@ body {
 div#mobile-header {
   display: none;
 }
-nav#desktop-nav {
+#mobile-nav {
+  display: none;
+  width: 300px;
+  background: #424242;
+}
+#mobile-nav .nav-list__items {
+  line-height: 40px;
+  vertical-align: top;
+}
+nav {
   background: rgba(0,0,0,0.6);
   position: fixed;
   width: 100px;
@@ -98,7 +107,7 @@ nav#desktop-nav {
   -webkit-animation: slideRight 0.5s;
           animation: slideRight 0.5s;
 }
-nav#desktop-nav .nav-brand {
+nav .nav-brand {
   display: block;
   height: 80px;
   color: #fff;
@@ -108,10 +117,10 @@ nav#desktop-nav .nav-brand {
   position: relative;
   cursor: pointer;
 }
-nav#desktop-nav .logo {
+nav .logo {
   background: #7ab3b5;
 }
-nav#desktop-nav .logo:before {
+nav .logo:before {
   content: "\e60f";
   position: absolute;
   top: 0;
@@ -123,11 +132,11 @@ nav#desktop-nav .logo:before {
   color: #fff;
   font-size: 40px;
 }
-nav#desktop-nav .nav-list {
+nav .nav-list {
   height: 90%;
   margin-top: 50px;
 }
-nav#desktop-nav .nav-list__items {
+nav .nav-list__items {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -141,43 +150,43 @@ nav#desktop-nav .nav-list__items {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav#desktop-nav .nav-list__items.selected {
+nav .nav-list__items.selected {
   color: #c84e4b;
 }
-nav#desktop-nav .nav-list__items:hover {
+nav .nav-list__items:hover {
   color: #c84e4b;
 }
-nav#desktop-nav .profile:before {
+nav .profile:before {
   content: "\e89b";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav#desktop-nav .profile:hover:before {
+nav .profile:hover:before {
   color: #c84e4b;
 }
-nav#desktop-nav .projects:before {
+nav .projects:before {
   content: "\e608";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav#desktop-nav .projects:before.selected {
+nav .projects:before.selected {
   color: #c84e4b;
 }
-nav#desktop-nav .projects:hover:before {
+nav .projects:hover:before {
   color: #c84e4b;
 }
-nav#desktop-nav .contact:before {
+nav .contact:before {
   content: "\e6ee";
   color: #fff;
   font-size: 40px;
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-nav#desktop-nav .contact:hover:before {
+nav .contact:hover:before {
   color: #c84e4b;
 }
 #profile {
@@ -354,6 +363,9 @@ nav#desktop-nav .contact:hover:before {
   nav#desktop-nav {
     display: none;
   }
+  #mobile-nav {
+    display: block;
+  }
   div#mobile-header {
     text-align: center;
     display: block;
@@ -363,7 +375,7 @@ nav#desktop-nav .contact:hover:before {
     -webkit-animation: slideDown 1.5s;
             animation: slideDown 1.5s;
   }
-  div#mobile-header #mobile-menu:before {
+  div#mobile-header #mobile-nav-icon:before {
     float: left;
     content: '\e8b6';
     color: #fff;
