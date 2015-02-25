@@ -80,13 +80,14 @@ body
 	left 0
 div#mobile-header
 	display none
-#mobile-nav
+.mobile-nav-mask
 	display none
-	width 300px
-	background #424242
-	.nav-list__items	
-		line-height	40px
-		vertical-align top
+	#mobile-nav
+		width 300px
+		background #424242
+		.nav-list__items	
+			line-height	40px
+			vertical-align top
 nav
 	background rgba(0, 0, 0, 0.6)
 	position fixed
@@ -308,8 +309,8 @@ nav
 	
 	nav#desktop-nav
 		display none
-	#mobile-nav
-		display block
+	#mobile-nav-mask
+		display none
 	div#mobile-header
 		text-align center
 		display block

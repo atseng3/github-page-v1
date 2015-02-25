@@ -34,11 +34,18 @@ window.Profile = {
     	$('.logo').on('click', this.showHomePage);
         $('.profile').on('click', this.showProfilePage);
         $('#learn-more').on('click', this.showProfilePage);
-        $('#mobile-nav-icon').on('click', this.showMobileNav);
+        $('#mobile-header').on('click', this.showMobileNav);
+        $('.mobile-nav-mask').on('click', this.hideMobileNav);
+    },
+
+    hideMobileNav: function(event) {
+        if($(event.target).hasClass('mobile-nav-mask')) {
+            $('.mobile-nav-mask').hide();
+        }
     },
 
     showMobileNav: function(event) {
-        // show the mobile menu --> same as desktop nav
+        $('.mobile-nav-mask').show();
     },
 
     showHomePage: function(event) {

@@ -86,12 +86,14 @@ body {
 div#mobile-header {
   display: none;
 }
-#mobile-nav {
+.mobile-nav-mask {
   display: none;
+}
+.mobile-nav-mask #mobile-nav {
   width: 300px;
   background: #424242;
 }
-#mobile-nav .nav-list__items {
+.mobile-nav-mask #mobile-nav .nav-list__items {
   line-height: 40px;
   vertical-align: top;
 }
@@ -363,8 +365,8 @@ nav .contact:hover:before {
   nav#desktop-nav {
     display: none;
   }
-  #mobile-nav {
-    display: block;
+  #mobile-nav-mask {
+    display: none;
   }
   div#mobile-header {
     text-align: center;
